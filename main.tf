@@ -3,10 +3,11 @@ resource "aws_security_group" "main" {
   description = "Security group for web servers"
   vpc_id      = var.vpc_id # Replace with your VPC ID
 
-  tags = merge(
-    var.sg_tags.
+ tags = merge(
     local.common_tags,
+    var.sg_tags          
   )
+
  egress {
     from_port        = 0
     to_port          = 0
