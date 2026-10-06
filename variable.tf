@@ -5,10 +5,10 @@ variable "vpc_id" {
 ## optinal
 
 variable "sg_tags" {
-    type = string
-    default ={ }
+  type        = map(string)   
+  default     = {}
+  description = "Tags to be applied to the security group"
 }
-
 variable "project" {
     type = string
 }
