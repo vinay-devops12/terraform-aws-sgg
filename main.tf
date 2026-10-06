@@ -1,5 +1,5 @@
 resource "aws_security_group" "main" {
-  name        = "local.common_name"
+  name        = local.common_name
   description = "Security group for web servers"
   vpc_id      = var.vpc_id # Replace with your VPC ID
 
